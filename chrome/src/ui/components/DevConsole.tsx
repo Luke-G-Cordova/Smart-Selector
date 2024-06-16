@@ -23,9 +23,11 @@ function HTMLDisplay({ style }: { style?: React.CSSProperties }) {
   const elem = useRef<HTMLDivElement>();
   useEffect(() => {
     htmlDoc.current = document.documentElement.outerHTML;
-    elem.current.innerHTML = hljs.highlight(htmlDoc.current, {
-      language: 'xml',
-    }).value;
+    const highlight = hljs.highlight(htmlDoc.current, {
+      language: 'html',
+    });
+    elem.current.innerHTML = highlight.value;
+    // console.log(highlight.value);
   }, []);
   return (
     <div className="screen" id="html-display" style={style}>
