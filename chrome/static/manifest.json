@@ -32,5 +32,13 @@
     "32": "/icons/32x.png",
     "48": "/icons/48x.png",
     "128": "/icons/128x.png"
+  },
+  "commands": {
+    "toggle_popup": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+X"
+      },
+      "description": "Toggles the dom based popup"
+    }
   }
 }

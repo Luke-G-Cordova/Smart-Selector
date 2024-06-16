@@ -19,6 +19,7 @@ module.exports = {
         use: ['babel-loader'],
         exclude: /node_modules/,
       },
+      { test: /\.([cm]?ts|tsx)$/, loader: 'ts-loader' },
       {
         test: /\.(scss|css)$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
@@ -26,7 +27,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['.ts', '.js'],
+    extensions: ['.ts', '.tsx', '.js'],
   },
   output: {
     filename: '[name].js',
